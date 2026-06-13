@@ -1,0 +1,70 @@
+# --- C / C++ build artifacts ---
+# Out-of-source and in-tree build directories produced by CMake/Make.
+build/
+cmake-build-*/
+
+# Object files and static/shared libraries left behind by the compiler/linker.
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+
+# Executables and profiling output from local bench/test runs.
+*.exe
+*.out
+*.gch
+*.pch
+gmon.out
+callgrind.out.*
+perf.data*
+
+# --- Emscripten / WASM outputs ---
+# Generated when compiling solver-cpp into solver-wasm.
+*.wasm
+*.wasm.map
+
+# --- Node / web frontend ---
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+
+# --- Python / vision training ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# --- Model weights (store in Cloudflare R2, not git) ---
+*.onnx
+*.pt
+*.pth
+*.trt
+*.engine
+*.h5
+*.pb
+*.tflite
+
+# --- Large datasets (store in R2; keep only small samples in data/puzzles/) ---
+*.csv
+*.tsv
+*.parquet
+*.npz
+*.npy
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
